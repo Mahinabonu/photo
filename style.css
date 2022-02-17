@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+:root {
+    --bg-prim: #eee;
+    --bg_sec: #fff;
+    --grey: #888;
+    /*btn*/
+    --bg_btn: #ccc;
+    --dark: #333
+
+}
+
+
+*, html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    background-color: var(--bg-prim);
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--grey);
+    margin: 1rem;
+
+}
+h3{
+    margin: 1.5rem;
+    text-transform: capitalize;
+}
+p{
+    padding-bottom: 2rem;
+}
+
+a{
+    text-decoration: none;
+}
+a:link, a:visited{
+    color: var(--dark);
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--bg_sec);
+    box-shadow: 30px 0 40px rgba(0, 0, 0, 0.1),
+    -30px 0 40px rgba(0, 0, 0, 0.1);
+}
+
+/*INTRO*/
+.intro {
+    height: 100vh;
+}
+
+.intro_grid {
+    display: grid;
+    height: inherit;
+    grid-template-columns: 45% 55%;
+    grid-template-areas: "title img";
+}
+
+.img_grid {
+    grid-template-areas: "img";
+    background-image: url("./img/cam.jpg");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+}
+
+.title {
+    grid-template-areas:"title";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+/*BUTTON*/
+.btn {
+    padding: 1.3em 3.3em;
+    border: 1px solid var(--bg_btn);
+    border-radius: 50px;
+    background: inherit;
+    margin: 2rem 0 0;
+    transition: background 500ms ease-in-out;
+}
+
+.btn:hover {
+    background: var(--bg_btn);
+}
+
+/*OUR WORK*/
+.dark {
+    color: var(--bg-prim);
+    background: var(--dark);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dark h2 {
+    max-width: fit-content;
+    align-items: center;
+    border: dotted white;
+    border-width: 0 1px;
+    padding: 0 1rem;
+    text-transform: capitalize;
+}
+
+img {
+    width: 100%;
+    max-height: 50vh;
+}
+
+.white{
+    text-align: center;
+    color: black;
+
+}
+
+/*FOOTER*/
+footer{
+    margin: 1rem;
+    padding: 2rem;
+    color: var(--dark);
+}
+footer h1{
+    font-weight: 700;
+    text-transform: capitalize;
+}
+footer p{
+    padding: 0.7rem;
+}
