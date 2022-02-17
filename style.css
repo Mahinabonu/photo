@@ -36,20 +36,24 @@ h2 {
     margin: 1rem;
 
 }
-h3{
+
+h3 {
     margin: 1.5rem;
     text-transform: capitalize;
 }
-p{
+
+p {
     padding-bottom: 2rem;
 }
 
-a{
+a {
     text-decoration: none;
 }
-a:link, a:visited{
+
+a:link, a:visited {
     color: var(--dark);
 }
+
 .container {
     max-width: 900px;
     margin: 0 auto;
@@ -86,6 +90,7 @@ a:link, a:visited{
     justify-content: center;
     height: 100%;
     flex-direction: column;
+    min-width: 400px;
 }
 
 /*BUTTON*/
@@ -125,22 +130,33 @@ img {
     max-height: 50vh;
 }
 
-.white{
+.white {
     text-align: center;
     color: black;
 
 }
 
 /*FOOTER*/
-footer{
+footer {
     margin: 1rem;
     padding: 2rem;
     color: var(--dark);
 }
-footer h1{
+
+footer h1 {
     font-weight: 700;
     text-transform: capitalize;
 }
-footer p{
+
+footer p {
     padding: 0.7rem;
+}
+
+@media (min-width: 600px) {
+    .intro_grid {
+        display: flex;
+        flex-direction: column;
+
+    }
+
 }
