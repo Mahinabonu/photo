@@ -11,7 +11,7 @@
 }
 
 
-*, html, body {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -63,24 +63,29 @@ a:link, a:visited {
 }
 
 /*INTRO*/
-.intro {
-    height: 100vh;
-}
+/*.intro {*/
+/*    height: 100vh;*/
+/*    max-width: 900px;*/
+/*    margin: 0 auto*/
+/*}*/
 
 .intro_grid {
+    height: 100vh;
+    max-width: 900px;
+    margin: 0 auto;
     display: grid;
-    height: inherit;
     grid-template-columns: 45% 55%;
     grid-template-areas: "title img";
 }
 
 .img_grid {
+    display: block;
+    max-width: 100%;
     grid-template-areas: "img";
     background-image: url("./img/cam.jpg");
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
-
 }
 
 .title {
@@ -90,7 +95,7 @@ a:link, a:visited {
     justify-content: center;
     height: 100%;
     flex-direction: column;
-    min-width: 400px;
+    min-width: 100%;
 }
 
 /*BUTTON*/
@@ -152,11 +157,42 @@ footer p {
     padding: 0.7rem;
 }
 
-@media (min-width: 600px) {
+
+@media screen and (max-width: 600px) {
+    /*INTRO*/
     .intro_grid {
         display: flex;
         flex-direction: column;
-
     }
 
+    .img_grid, .title {
+        height: 50vh;
+    }
+
+    .img_grid {
+        display: inline-block;
+    }
+
+    /*FONTS*/
+    h1 {
+        font-weight: 300;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    h2 {
+        font-weight: 300;
+        font-size: .9rem;
+    }
+
+    h3 {
+        margin: 1rem;
+    }
+
+    /*FOOTER*/
+    footer {
+        margin: 0;
+        padding: 0;
+    }
 }
